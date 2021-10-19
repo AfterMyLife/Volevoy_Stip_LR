@@ -88,3 +88,10 @@ a {
   .show {
     display: block;
   }
+
+  #square {
+    width: 20px;
+    height: 20px;
+    padding: 0.5em;
+    background-color: #2196F3;
+}
