@@ -1,0 +1,66 @@
+
+.acordeon {
+	max-width: 100%;
+	background: white;
+	margin: 0 auto;
+}
+
+.panel {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.panel:hover {
+    background-color: #ccc;
+}
+
+
+.content {
+	display: none;
+	border-bottom: 1px solid #DDE0E7;
+	background: #fff;
+	padding: 1.4rem;
+	color: black;
+}
+
+
+body{
+    font-family:Arial, Verdana, sans-serif;
+}
+select{
+    padding: 7px;
+}
+
+button[type=button] {
+    width: 160px;
+    background-color:#FC7574;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover,
+button[type=button]:hover
+{
+    background-color: #e47b7b;;
+}
+
+button:disabled,
+button[disabled]:hover,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
