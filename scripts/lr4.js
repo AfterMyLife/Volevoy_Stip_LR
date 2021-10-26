@@ -8,14 +8,11 @@ const patterns = {
 }
 
 function validate(field, regex) {
-    //console.log(regex.test(field.value));
     if (regex.test(field.value)) {
         field.className = "valid";
-        // console.log(field.className)
     }
     else {
         field.className = "invalid";
-        // console.log(field.className)
     }
 }
 
