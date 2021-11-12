@@ -1,13 +1,89 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    lr2
+    <p>
+        Вариант 1
+        Информация о книгах в библиотеке:
+        - идентификационный номер;
+        - стеллаж:
+        ü номер стеллажа;
+        ü жанр;
+        ü тематика;
+        - автор или авторы;
+        - название;
+        - под редакцией;
+        - общее количество экземпляров;
+        - количество выданных экземпляров.
+    </p>
+
+    <div id='content'>
+        <table id='books' cellpadding='10px' style="text-align:left;">
+            <thead>
+                <tr>
+                    <th>Номер книги</th>
+                    <th>Стеллаж</th>
+                    <th>Автор</th>
+                    <th>Название</th>
+                    <th>Общее количество экземпляров</th>
+                    <th>Количество выданных экземпляров</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let xmlContent = '';
+        let tableBooks = document.getElementById('books');
+        fetch('books.xml').then((response) => {
+            response.text().then((xml) => {
+                xmlContent = xml;
+
+                let parser = new DOMParser();
+                let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                let books = xmlDOM.querySelectorAll('Book');
+
+                books.forEach(bookXmlNode => {
+
+                    let row = document.createElement('tr');
+
+
+                    let td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[0].innerHTML;
+                    row.appendChild(td);
+
+                    //  title
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[1].innerHTML;
+                    row.appendChild(td);
+
+                    //price
+                    td = document.createElement('td');
+                    td.innerText = '$ ' + bookXmlNode.children[3].innerHTML;
+                    row.appendChild(td);
+
+                    //description
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[5].innerHTML;
+                    row.appendChild(td);
+
+                    tableBooks.children[1].appendChild(row);
+
+                });
+
+            });
+        });
+    </script>
 </body>
+
 </html>

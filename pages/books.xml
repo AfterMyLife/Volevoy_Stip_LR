@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<LIBRARY>
+<Book number="1">
+  <Identify_number>145</Identify_number>
+  <Rack>
+  <Rack_number>12</Rack_number>
+  <Genre>Фантастика</Genre>
+  <Subject>Про фантастику</Subject>
+  </Rack>
+  <Author>Виталий Папуччо</Author>
+  <Title>Защита древных 2</Title>
+<Edited_by>Виталий Громяко</Edited_by>
+<Book_count>500</Book_count>
+<Count_issued>499</Count_issued>
+</Book>
+<Book number="2">
+  <Identify_number>175</Identify_number>
+  <Rack>
+  <Rack_number>13</Rack_number>
+  <Genre>Ужасы</Genre>
+  <Subject>Очень страшно</Subject>
+  </Rack>
+  <Author>Жак Энтони</Author>
+  <Title>Свирепый фрист</Title>
+<Edited_by>Джоан Роулинг</Edited_by>
+<Book_count>112</Book_count>
+<Count_issued>38</Count_issued>
+</Book>
+</LIBRARY>
