@@ -1,0 +1,13 @@
+<!ELEMENT LIBRARY (Book+)>
+<!ELEMENT Book (Identify_number,Rack,Author,Title,Edited_by,Book_count,Count_issued)>
+<!ATTLIST Book number NMTOKEN #REQUIRED>
+<!ELEMENT Identify_number (#PCDATA)>
+<!ELEMENT Rack (Rack_number,Genre,Subject)>
+<!ELEMENT Rack_number (#PCDATA)>
+<!ELEMENT Genre (#PCDATA)>
+<!ELEMENT Subject (#PCDATA)>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Edited_by (#PCDATA)>
+<!ELEMENT Book_count (#PCDATA)>
+<!ELEMENT Count_issued (#PCDATA)>

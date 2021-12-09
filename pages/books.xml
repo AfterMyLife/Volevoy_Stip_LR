@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!DOCTYPE LIBRARY SYSTEM "books.dtd">
 <LIBRARY>
 <Book number="1">
   <Identify_number>145</Identify_number>
