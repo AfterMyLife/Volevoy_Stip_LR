@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
-<!DOCTYPE LIBRARY SYSTEM "books.dtd">
-<LIBRARY>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<library>
 <Book number="1">
   <Identify_number>145</Identify_number>
   <Rack>
@@ -27,4 +27,4 @@
 <Book_count>112</Book_count>
 <Count_issued>38</Count_issued>
 </Book>
-</LIBRARY>
+</library>

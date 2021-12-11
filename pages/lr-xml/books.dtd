@@ -1,6 +1,6 @@
-<!ELEMENT LIBRARY (Book+)>
+<!ELEMENT library (Book+)>
 <!ELEMENT Book (Identify_number,Rack,Author,Title,Edited_by,Book_count,Count_issued)>
-<!ATTLIST Book number NMTOKEN #REQUIRED>
+<!ATTLIST Book number CDATA #REQUIRED>
 <!ELEMENT Identify_number (#PCDATA)>
 <!ELEMENT Rack (Rack_number,Genre,Subject)>
 <!ELEMENT Rack_number (#PCDATA)>
