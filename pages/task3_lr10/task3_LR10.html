@@ -11,14 +11,13 @@
 </head>
 
 <body>
-9
 </body>
 <script language="javascript">
     var oMystuff = new ActiveXObject("Microsoft.XMLDOM")
     oMystuff.async = "false";
     
     document.write("<ul>");
-    oMystuff.load("2.xml")
+    oMystuff.load("task3_LR10.xml")
     var numbers = oMystuff.getElementsByTagName("num");
     for (let index = 0; index < numbers.length; index++) {
         const element = numbers[index];
@@ -43,7 +42,7 @@
                 element.text = "шесть"
                 break;
             case '7':
-                element.text = "сем"
+                element.text = "семь"
                 break;
             case '8':
                 element.text = "восемь"
