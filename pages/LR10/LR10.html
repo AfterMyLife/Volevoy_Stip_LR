@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+    <div id='content'>
+        <table id='books' cellpadding='10px' style="text-align:left;" border="1" >
+            <thead>
+                <tr>
+                    <th>Identify_number</th>
+      <th >Rack</th>
+<th>Author</th>
+<th >Title</th>
+<th >Edited_by</th>
+<th >Book_count</th>
+<th >Count_issued</th>
+                </tr>                
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <a>3 задание работает только в IE(или с помощью расширения IE tab, так как ActiveXObject в Chrome не запускается</a>
+        <a href="./task3_lr10/task3_LR10.html" target="_blank">Ссылка на 3 задание</a>
+    </div>
+
+    <script>
+        
+        let xmlContent = '';
+        let tableBooks = document.getElementById('books');
+        fetch('books.xml').then((response)=> {
+            response.text().then((xml)=>{
+                xmlContent = xml;
+
+                let parser = new DOMParser();
+                let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                let books = xmlDOM.querySelectorAll('Book');
+
+                books.forEach(bookXmlNode => {
+
+                    let row = document.createElement('tr');
+
+                    //id
+                    let td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[0].innerHTML;
+                    row.appendChild(td);
+
+                    //  rack
+                    td = document.createElement('td');
+                    
+                   td.innerText = 'Номер: ' + bookXmlNode.children[1].childNodes[1].innerHTML;
+                   td.innerText += ' Жанр: ' + bookXmlNode.children[1].childNodes[3].innerHTML;
+                   td.innerText += ' Тема: ' + bookXmlNode.children[1].childNodes[5].innerHTML;
+
+                    row.appendChild(td);
+                    
+                    //price
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[2].innerHTML;
+                    row.appendChild(td);
+
+                    //description
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[3].innerHTML;
+                    row.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[4].innerHTML;
+                    row.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[5].innerHTML;
+                    row.appendChild(td);
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[6].innerHTML;
+                    row.appendChild(td);
+                    tableBooks.children[1].appendChild(row);
+                    
+                    
+                });
+             
+                
+            });
+            
+        });   
+        
+        
+    </script>
+</body>
+</html>

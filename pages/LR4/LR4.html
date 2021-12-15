@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lr4.css">
+    <title>ЛР№4</title>
+</head>
+
+<body>
+    <button class="accordion">Задание 1</button>
+    <div class="panel">
+        <p>1. Создать страницу с динамическим содержанием &quot;Проверка
+            значений, введенных пользователем в поля формы для регистрации&quot;.
+            Форма должна содержать поля «Имя», «Фамилия», «Наименование
+            организации», «Номер кредитной карты», «Номер телефона», «Адрес
+            электронной почты», кнопки «Отправить» и «Очистить».</p>
+        <p> 2. Осуществить проверку заполненности данными всех полей.</p>
+        <p>3. Построить шаблон для проверки данных кредитной карточки с
+            ограничением количества попыток неправильного ввода данных.</p>
+        <p> 4. Последняя проверка должна контролировать структуру и
+            содержимое полей (правильность ввода имени и фамилии,номера
+            телефона,электронного адреса.).</p>
+        <hr>
+    </div>
+    <button class="accordion">Демонстрация 1 задания</button>
+    <div class="panel">
+        <form>
+            <p>Имя должно содержать хотябы 1 символ.</p>
+            <input type="text" name="name" placeholder="Имя" class="" required>
+
+            <p>Фамилия должна содержать хотябы 1 символ.</p>
+            <input type="text" name="surname" placeholder="Фамилия" class="" required>
+
+            <p>Укажите правильную форму Email, например vitaliygromiako@vinnica.ua</p>
+            <input type="email" name="email" placeholder="email" class="" required>
+
+            <p>Кредитная карта Visa начинается с цифры 4, и имеет длинну в 16 цифр.</p>
+            <input type="tel" id="creditcard" name="creditcard" placeholder="Кредитная карта" class="invalid" required><br>
+
+            <button type="button" id="button" onclick="validbut()">Проверка кредитной карты</button>
+
+            <p>Телефон должен быть введен в правильном формате (+380)</p>
+            <input type="text" name="telephone" placeholder="Номер телефона" class="" required>
+            <p><input type="submit" value="Проверить"></p>
+        </form>
+    </div>
+    <button class="accordion">Задание 2</button>
+    <div class="panel">
+        <p>Дана строка &#39;aba accca azzza wwwwa&#39;. Напишите регулярное
+            выражение, которое найдет все строки по краям которых стоят буквы &#39;a&#39;, и
+            заменит каждую из них на &#39;!&#39;. Между буквами a может быть любой символ </p>
+
+        <input type="text" id="myinput" style="width: 300px;" placeholder="Вставьте строку из задания"><br>
+        <button type="button" onclick="changevalue()">Изменить</button>
+        <p id="newinput"></p>
+        <hr>
+    </div>
+    <script type="text/javascript" src="lr4.js"></script>
+</body>
+
+</html>
